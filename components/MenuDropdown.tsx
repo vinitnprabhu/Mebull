@@ -18,12 +18,14 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar"
 import { LogOut } from "lucide-react"
+import {signOut} from "@/lib/actions/auth.actions";
 
 const MenuDropdown = () => {
   const router = useRouter()
 
-  const handleSignOut = () => {
-    router.push("/sign-in")
+  const handleSignOut = async () => {
+    await signOut();
+    router.push("/sign-in");
   }
 
   const user = {
