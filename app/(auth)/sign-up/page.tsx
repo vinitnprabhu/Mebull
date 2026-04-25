@@ -36,8 +36,8 @@ const SignUp = () => {
         try {
             const result = await signUpWithEmail(data);
             if (result.success) {
+                router.refresh();
                 router.push('/');
-                router.refresh(); 
             }
         } catch (e) {
             console.error(e);
