@@ -36,8 +36,7 @@ const SignUp = () => {
         try {
             const result = await signUpWithEmail(data);
             if (result.success) {
-                router.refresh();
-                router.push('/');
+                window.location.href = '/';
             }
         } catch (e) {
             console.error(e);
