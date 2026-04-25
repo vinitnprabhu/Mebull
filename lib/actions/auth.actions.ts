@@ -8,7 +8,7 @@ export const signUpWithEmail = async ({ email, password, fullName, country, inve
     try {
         const response = await auth.api.signUpEmail({
             body: { email, password, name: fullName },
-            headers: await headers()  // 👈 this is what was missing
+            headers: await headers() 
         })
 
         if(response) {
